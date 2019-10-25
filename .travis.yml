@@ -135,7 +135,7 @@ jobs:
 
       script:
       - sg lxd -c '/snap/bin/snapcraft --use-lxd'
-      - SNAP_ENFORCE_RESQUASHFS=0 /snap/bin/review-tools.snap-review --allow-classic *.snap
+      - SNAP_ENFORCE_RESQUASHFS=0 /snap/bin/review-tools.snap-review --plugs=snap/local/plugs.json *.snap
       after_success:
       - BUILDS=()
       - >-
